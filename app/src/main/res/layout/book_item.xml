@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/layout_round"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    >
+
+    <ImageView
+        android:id="@+id/image_book"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/bookicon"/>
+    <TextView
+        android:id="@+id/textv_masach"
+        android:text="ma sach"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/image_book"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/textv_amount"
+        android:layout_below="@+id/textv_masach"
+        android:layout_toRightOf="@+id/image_book"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="gia ban"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+<!--    <ImageButton-->
+<!--        android:id="@+id/imagebutton_order"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_toLeftOf="@id/image_xoa"-->
+<!--        android:layout_marginTop="10dp"-->
+
+<!--        android:background="@drawable/ic_baseline_add_shopping_cart_24"-->
+<!--        />-->
+    <ImageButton
+        android:id="@+id/image_xoa"
+        android:layout_width="60dp"
+        android:background="@drawable/ic_baseline_delete_forever_24"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    >
+
+    <TextView
+        android:id="@+id/textname"
+        android:gravity="center"
+        android:text="Thêm sách"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/lobster"
+        />
+    <EditText
+        android:id="@+id/mahoadon"
+        android:layout_width="match_parent"
+        android:hint="mã hóa đơn"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textname"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/ngaymua"
+        android:hint="yyyy/mm/dd"
+        android:layout_below="@+id/mahoadon"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/lich"
+        android:layout_toRightOf="@+id/ngaymua"
+        android:layout_below="@+id/mahoadon"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/lobster"
+        android:text="chọn"
+        android:textColor="@color/colorBlack"
+        android:background="@color/colorOrange"
+
+        android:layout_height="46dp"
+        />
+
+
+    <Button
+        android:id="@+id/themhoadon"
+        android:text="them hoa don"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/lobster"
+        android:background="@drawable/button_round"
+        android:layout_below="@+id/ngaymua"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        />
+
+
+</RelativeLayout>

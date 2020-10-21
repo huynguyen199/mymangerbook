@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textvmahoadon"
+        android:text="Mã hóa đơn"
+        android:layout_width="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/lobster"
+        android:textSize="15dp"
+        />
+    <Spinner
+        android:layout_toRightOf="@+id/textvmahoadon"
+        android:id="@+id/spinner_mahoadon"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textAlignment="center"
+
+        />
+    <TextView
+        android:id="@+id/textvmasach"
+        android:text="Mã sách"
+        android:layout_below="@+id/textvmahoadon"
+        android:layout_width="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/lobster"
+        android:textSize="15dp"
+        />
+    <Spinner
+        android:id="@+id/spinner_masach"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/textvmasach"
+        android:layout_below="@+id/spinner_mahoadon"
+        />
+    <EditText
+        android:id="@+id/soluongmua"
+        android:hint="Số lượng mua"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_masach"
+        />
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soluongmua"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_addhoadon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/lobster"
+            android:background="@drawable/button_round"
+            android:text="Thêm"
+            />
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/lobster"
+            android:layout_weight="1"
+            android:background="@drawable/button_round"
+            android:text="Thanh toán"
+            />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_pay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pay"
+        />
+</RelativeLayout>

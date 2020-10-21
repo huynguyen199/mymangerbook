@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_marginTop="-40dp"
+    >
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logobook"
+        android:layout_gravity="center"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký tài khoản"
+        android:fontFamily="@font/lobster"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        />
+
+    <EditText
+        android:id="@+id/user_account"
+        android:layout_marginTop="10dp"
+        android:hint="tài khoản"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_round"
+        />
+
+    <EditText
+        android:id="@+id/user_password"
+        android:layout_marginTop="10dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/user_cofirm_password"
+        android:background="@drawable/edit_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:hint="xác nhận mật khẩu" />
+
+    <EditText
+        android:id="@+id/user_number_phone"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_round"
+        android:hint="số điện thoại"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/user_name"
+        android:background="@drawable/edit_round"
+        android:hint="tên"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/user_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:background="@drawable/button_round"
+            android:text="Lưu"
+            />
+        <Button
+            android:id="@+id/user_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:background="@drawable/button_round"
+            android:text="hủy"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

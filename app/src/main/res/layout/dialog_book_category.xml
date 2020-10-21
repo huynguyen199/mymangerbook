@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/lobster"
+        android:text="them danh sach"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        android:background="@color/colorOrange"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/matheloai"
+        android:hint="mã thể loại"
+        />
+    <EditText
+        android:id="@+id/tentheloai"
+        android:hint="tên thể loại"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/mota"
+        android:hint="mô tả"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/vitri"
+        android:hint="vị trí"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/them"
+        android:text="thêm"
+        android:fontFamily="@font/lobster"
+        android:background="@drawable/button_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        />
+
+</LinearLayout>

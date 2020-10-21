@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/linear_book"
+    android:layout_marginTop="20dp"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:gravity="center"
+        android:fontFamily="@font/lobster"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"
+        android:text="thêm sách"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        />
+    <EditText
+        android:id="@+id/masach"
+        android:layout_width="match_parent"
+        android:hint="mã sách"
+        android:layout_height="wrap_content"
+        />
+    <Spinner
+        android:id="@+id/tentheloai"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+    <EditText
+        android:id="@+id/tieude"
+        android:hint="tiêu đề"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/tacgia"
+        android:hint="tác giả"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/soluong"
+        android:hint="Số lượng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/giabia"
+        android:hint="giá bìa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/nxb"
+        android:hint="nhà xuất bản"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/themsach"
+        android:text="Thêm sách"
+        android:fontFamily="@font/lobster"
+        android:background="@drawable/button_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        />
+
+
+</LinearLayout>

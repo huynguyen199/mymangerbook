@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_sach"
+            android:title="Sách"
+            android:icon="@drawable/ic_book_black_24dp"
+            />
+
+        <item android:id="@+id/nav_hoadon"
+            android:title="Hóa đơn"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            />
+        <item android:id="@+id/nav_thanhtoan"
+            android:title="Thành toán"
+            android:icon="@drawable/ic_baseline_payment_24"
+            />
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Thông tin">
+            <menu>
+        <item android:id="@+id/nav_banchay"
+            android:icon="@drawable/money_icon"
+            android:title="Sách bán chạy"/>
+        <item android:id="@+id/nav_thongke"
+            android:icon="@drawable/icon_thong_ke2"
+            android:title="Thống kê"/>
+        <item android:id="@+id/nav_manager_user"
+            android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+            android:title="Quản lý tài khoản"
+            />
+
+        <item android:id="@+id/nav_thoat"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="thoát"/>
+            </menu>
+        </item>
+    </group>
+</menu>

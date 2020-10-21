@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOrange"
+    >
+
+
+    <ImageView
+        android:id="@+id/image_book"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/logobook"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorWhite"
+        android:text="Cửa Hàng Sách"
+        android:layout_below="@+id/image_book"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_below="@+id/hello"
+        android:layout_centerHorizontal="true"
+        android:layout_width="240dp"
+        android:layout_marginTop="100dp"
+        android:text="Chào mừng bạn đến với cửa hàng sách"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+
+        />
+
+</RelativeLayout>
