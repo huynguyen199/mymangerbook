@@ -66,13 +66,14 @@ public class Payfragment extends Fragment {
                 if(soluong.getText().equals(null)){
                     soluong.setError("không được để trống");
                 }
-                Dao_Pay dao_pay = new Dao_Pay(container.getContext(),v);
+                    Dao_Pay dao_pay = new Dao_Pay(container.getContext(), v);
 
-                String mahoadon = spinnerhd.getSelectedItem().toString();
-                String masach = spinnersach.getSelectedItem().toString();
-                String soluongmua = soluong.getText().toString();
-                HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet(null,mahoadon, masach, soluongmua);
-                dao_pay.insert(hoaDonChiTiet);
+                    String mahoadon = spinnerhd.getSelectedItem().toString();
+                    String masach = spinnersach.getSelectedItem().toString();
+
+                    String soluongmua = soluong.getText().toString();
+                    HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet(null, mahoadon, masach, soluongmua);
+                    dao_pay.insert(hoaDonChiTiet);
 
 
 
@@ -114,7 +115,15 @@ public class Payfragment extends Fragment {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             String amount = soluong.getText().toString().trim();
-            btnadd.setEnabled(!amount.isEmpty());
+            String spsach = "";
+            String sphd = "";
+            if(spinnersach.getSelectedItem() !=null ) {
+                spsach = (String) spinnersach.getSelectedItem();
+            }
+            if(spinnerhd.getSelectedItem() != null){
+                sphd = (String) spinnerhd.getSelectedItem();
+            }
+            btnadd.setEnabled(!amount.isEmpty()&&!sphd.isEmpty()&&!spsach.isEmpty());
         }
 
         @Override
@@ -134,6 +143,7 @@ public class Payfragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-//        adapter.stopListening();
+        //
+        adapter.stopListening();
     }
 }

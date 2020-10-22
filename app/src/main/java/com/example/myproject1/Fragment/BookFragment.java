@@ -52,6 +52,7 @@ public class BookFragment extends Fragment {
 
     EditText masach,tieude,tacgia,soluong,giabia,nxb;
     Button btnadd;
+    Spinner tentheloai;
 //    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-30");
     FirebaseRecyclerAdapter<Book, adapterBook.BookHoder> adapter;
     @Nullable
@@ -78,7 +79,7 @@ public class BookFragment extends Fragment {
                 builder.setView(view);
 
                  masach = view.findViewById(R.id.masach);
-                final Spinner tentheloai = view.findViewById(R.id.tentheloai);
+                tentheloai = view.findViewById(R.id.tentheloai);
                 tieude = view.findViewById(R.id.tieude);
                 tacgia = view.findViewById(R.id.tacgia);
                 soluong = view.findViewById(R.id.soluong);
@@ -87,6 +88,13 @@ public class BookFragment extends Fragment {
                 btnadd = view.findViewById(R.id.themsach);
                 final AlertDialog  dialog = builder.create();
 
+                masach.setText("book01");
+                tieude.setText("sach bla bla");
+                tacgia.setText("van C");
+                soluong.setText("200");
+                giabia.setText("20000");
+                nxb.setText("ai biet");
+
                 masach.addTextChangedListener(textWatcher);
                 tieude.addTextChangedListener(textWatcher);
                 tacgia.addTextChangedListener(textWatcher);
@@ -94,12 +102,6 @@ public class BookFragment extends Fragment {
                 giabia.addTextChangedListener(textWatcher);
                 nxb.addTextChangedListener(textWatcher);
 
-                masach.setText("book01");
-                tieude.setText("sach bla bla");
-                tacgia.setText("van C");
-                soluong.setText("200");
-                giabia.setText("20000");
-                nxb.setText("ai biet");
                 view.setTag(dialog);
 
                 Dao_Book dao_book = new Dao_Book(container.getContext(),view);
@@ -182,13 +184,14 @@ public class BookFragment extends Fragment {
             String mnxb = nxb.getText().toString();
             String mgiabia = giabia.getText().toString();
             String msoluong = soluong.getText().toString();
-
+            boolean spinner = (tentheloai.getCount() == 0);
 
 //            String mahoadon = mmahoadon.getText().toString();
 //            String date = mdate.getText().toString();
             Boolean btn = !mmasach.isEmpty() && !mtieude.isEmpty()
                     &&!mtacgia.isEmpty() && !mnxb.isEmpty()
-                    &&!mgiabia.isEmpty() && !msoluong.isEmpty();
+                    &&!mgiabia.isEmpty() && !msoluong.isEmpty()
+                    &&spinner;
             btnadd.setEnabled(btn);
         }
 

@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:id="@+id/linear_book"
-    android:layout_marginTop="20dp"
-    android:layout_margin="10dp"
+    android:padding="10dp"
     >
 
     <TextView
