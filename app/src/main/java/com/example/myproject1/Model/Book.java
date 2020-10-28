@@ -92,7 +92,18 @@ public class Book implements Serializable {
     public String nxb;
     public String giabia;
     public String soluong;
+    public String asm;
 
+    public Book(String masach, String tentheloai, String tieude, String tacgia, String nxb, String giabia, String soluong, String asm) {
+        this.masach = masach;
+        this.tentheloai = tentheloai;
+        this.tieude = tieude;
+        this.tacgia = tacgia;
+        this.nxb = nxb;
+        this.giabia = giabia;
+        this.soluong = soluong;
+        this.asm = asm;
+    }
 
     public Book() {
     }
@@ -163,6 +174,14 @@ public class Book implements Serializable {
         this.soluong = soluong;
     }
 
+    public String getAsm() {
+        return asm;
+    }
+
+    public void setAsm(String asm) {
+        this.asm = asm;
+    }
+
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
@@ -173,6 +192,7 @@ public class Book implements Serializable {
         result.put("nxb", nxb);
         result.put("giabia", giabia);
         result.put("soluong", soluong);
+        result.put("asm", asm);
 
         return result;
     }

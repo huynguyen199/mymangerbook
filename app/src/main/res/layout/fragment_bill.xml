@@ -8,6 +8,7 @@
 
         android:id="@+id/search_hoadon"
         android:layout_width="match_parent"
+        android:hint="tìm kiếm"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         />

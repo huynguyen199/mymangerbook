@@ -50,7 +50,7 @@ public class BookFragment extends Fragment {
     private DatabaseReference firebaseDatabase;
     EditText search;
 
-    EditText masach,tieude,tacgia,soluong,giabia,nxb;
+    EditText masach,tieude,tacgia,soluong,giabia,nxb,asm;
     Button btnadd;
     Spinner tentheloai;
 //    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-30");
@@ -86,6 +86,7 @@ public class BookFragment extends Fragment {
                 giabia = view.findViewById(R.id.giabia);
                 nxb = view.findViewById(R.id.nxb);
                 btnadd = view.findViewById(R.id.themsach);
+                asm = view.findViewById(R.id.asm);
                 final AlertDialog  dialog = builder.create();
 
                 masach.setText("book01");
@@ -94,6 +95,7 @@ public class BookFragment extends Fragment {
                 soluong.setText("200");
                 giabia.setText("20000");
                 nxb.setText("ai biet");
+                asm.setText("abc");
 
                 masach.addTextChangedListener(textWatcher);
                 tieude.addTextChangedListener(textWatcher);
@@ -122,8 +124,8 @@ public class BookFragment extends Fragment {
                             String mnxb = nxb.getText().toString();
                             String mgiabia = giabia.getText().toString();
                             String msoluong = soluong.getText().toString();
-
-                                Book book = new Book(mmasach, mtheloai, mtieude, mtacgia, mnxb, mgiabia, msoluong);
+                            String masm = asm.getText().toString();
+                                Book book = new Book(mmasach, mtheloai, mtieude, mtacgia, mnxb, mgiabia, msoluong,masm);
                                 Dao_Book dao = new Dao_Book(container.getContext(), view);
                                 dao.insert(book);
                         }catch (Exception e){
@@ -184,14 +186,16 @@ public class BookFragment extends Fragment {
             String mnxb = nxb.getText().toString();
             String mgiabia = giabia.getText().toString();
             String msoluong = soluong.getText().toString();
-            boolean spinner = (tentheloai.getCount() == 0);
-
+            String mtentheloai = "";
+            if(tentheloai.getSelectedItem() !=null ) {
+                mtentheloai = (String) tentheloai.getSelectedItem();
+            }
 //            String mahoadon = mmahoadon.getText().toString();
 //            String date = mdate.getText().toString();
             Boolean btn = !mmasach.isEmpty() && !mtieude.isEmpty()
                     &&!mtacgia.isEmpty() && !mnxb.isEmpty()
                     &&!mgiabia.isEmpty() && !msoluong.isEmpty()
-                    &&spinner;
+                    &&!mtentheloai.isEmpty();
             btnadd.setEnabled(btn);
         }
 
@@ -221,4 +225,5 @@ public class BookFragment extends Fragment {
         super.onStop();
         adapter.stopListening();
     }
+
 }
